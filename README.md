@@ -2,4 +2,5 @@
 A python discord that can:
  - Give a the latency
  - Ban
+ - Unban
  - Kick
