@@ -40,6 +40,12 @@ async def ban_error(ctx, error):
 	else:
 		await ctx.send('Something went wrong.')
 
+@client.command()
+@has_permissions(ban_members=True)
+async def unban(ctx, user : discord.User):
+	await ctx.guild.unban(user=user)
+	await ctx.send(f'{user} unbanned')
+
 file = open("TOKEN.txt","r")
 TOKEN = file.read() # This stores the token in a text file so I do not have to release the token publicly.
 file.close()
